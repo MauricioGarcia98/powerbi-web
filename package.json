@@ -7,7 +7,7 @@
     "dev": "vite --host 0.0.0.0",
     "build": "tsc -b && vite build",
     "preview": "vite preview --host 0.0.0.0",
-    "test": "vitest run tests/engine.test.ts",
+    "test": "vitest run --root . --exclude '**/browser/**'",
     "test:e2e": "playwright test",
     "sync:pages": "node scripts/sync-pages.mjs",
     "build:pages": "npm run build && npm run sync:pages"
